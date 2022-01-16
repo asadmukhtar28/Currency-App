@@ -36,7 +36,7 @@ class CurrencyApp : Application(), Configuration.Provider {
         appScope.launch {
             val worker = PeriodicWorkRequestBuilder<FetchCurrencyQuotesWorker>(
                 30,
-                TimeUnit.HOURS
+                TimeUnit.MINUTES
             )
                 .addTag(WORK_MANAGER_TAG)
                 .setInitialDelay(0, TimeUnit.MILLISECONDS)

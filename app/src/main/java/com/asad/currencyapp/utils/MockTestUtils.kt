@@ -38,11 +38,6 @@ object MockTestUtils {
     }
 
     fun fetchCurrencyQuoteList(): List<CurrencyRates> {
-        val quotes = HashMap<String, Double>()
-        quotes["USDAED"] = 3.67299
-        quotes["USDAFN"] = 104.530194
-        quotes["USDALL"] = 106.622826
-
         return ArrayList<CurrencyRates>().apply {
             add(
                 CurrencyRates(
@@ -62,6 +57,14 @@ object MockTestUtils {
                     106.622826
                 )
             )
+        }
+    }
+
+    fun fetchCurrencyNameList(): List<CurrencyNames> {
+        return ArrayList<CurrencyNames>().apply {
+            add(CurrencyNames("AED","United Arab Emirates Dirham"))
+            add(CurrencyNames("AFN","Afghan Afghani"))
+            add(CurrencyNames("ALL","Albanian Lek"))
         }
     }
 }

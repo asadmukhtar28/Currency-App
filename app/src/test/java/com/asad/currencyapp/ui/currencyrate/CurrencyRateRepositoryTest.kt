@@ -1,9 +1,9 @@
-package com.asad.currencyapp
+package com.asad.currencyapp.ui.currencyrate
 
 import com.asad.currencyapp.data.remote.models.base.State
 import com.asad.currencyapp.data.remote.models.currencylist.CurrencyList
 import com.asad.currencyapp.data.remote.models.currencyrate.CurrencyQuotes
-import com.asad.currencyapp.ui.currencyrate.CurrencyRateRepository
+import com.asad.currencyapp.utils.MockTestUtils
 import io.mockk.MockKAnnotations
 import io.mockk.coEvery
 import io.mockk.impl.annotations.MockK
@@ -15,7 +15,7 @@ import org.hamcrest.CoreMatchers
 import org.hamcrest.MatcherAssert
 import org.junit.Before
 
-class CurrencyRateRepositoryTest : TestCase() {
+class CurrencyRateRepositoryTest : TestCase(){
 
     @MockK
     lateinit var rateRepository: CurrencyRateRepository
